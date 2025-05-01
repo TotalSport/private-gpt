@@ -48,4 +48,5 @@ COPY --chown=worker *.yaml .
 COPY --chown=worker scripts/ scripts
 
 USER worker
-ENTRYPOINT python -m private_gpt
+# ENTRYPOINT python -m private_gpt
+CMD ["poetry", "run", "python", "scripts/start.py"]
